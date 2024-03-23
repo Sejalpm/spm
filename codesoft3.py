@@ -9,16 +9,16 @@ print('''Choose character set for password from these:
          3. Special characters
          4. Exit''')
  
-characterList = ""
+character= ""
  
 while(True):
     choice = int(input("Pick a number "))
     if(choice == 1):
-         characterList += string.ascii_letters
+         character+= string.ascii_letters
     elif(choice == 2):
-         characterList += string.digits
+         character+= string.digits
     elif(choice == 3):
-         characterList += string.punctuation
+         character+= string.punctuation
     elif(choice == 4):
         break
     else:
@@ -27,7 +27,7 @@ while(True):
 password = []
  
 for i in range(length):
-   randomchar = random.choice(characterList)
+   randomchar = random.choice(character)
    password.append(randomchar)
  
 print("The random password is " + "".join(password))
